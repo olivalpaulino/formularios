@@ -1,0 +1,53 @@
+body {
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	background-color: black;
+}
+
+header {
+	text-align: center;
+	color: white;
+}
+
+h1 {
+	font-size: 22px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 700px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 50px;
+	color: black;
+}
+
+
+
+form {
+	padding: 10px;
+	border: 1px solid white;
+	border-radius: 15px;
+	width: 500px;
+	background-color: white;
+}
+
+.form-check {
+	text-align: left;
+}

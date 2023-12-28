@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>Cadastros Thymeleaf</title>
+</head>
+<body>
+	<header>
+		<hgroup>
+			<h1>Lista de Cadastros</h1>
+			<h2>Do Back ao Front - Programação FullStack</h2>
+		</hgroup>
+	</header>
+	
+	<main>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Nome</th>
+					<th scope="col">E-mail</th>
+					<th scope="col">WhatsApp</th>
+					<th scope="col">Atualizar</th>
+				<tr>
+			</thead>
+			
+			<tboby>	
+				<tr scope="row" th:each="pessoa: ${pessoas}">
+					<td th:text="${pessoa.id}"></td>
+					<td th:text="${pessoa.nome}"></td>
+					<td th:text="${pessoa.email}"></td>
+					<td th:text="${pessoa.whatsapp}"></td>
+					<td>
+						<a th:href="@{'/editar/'+${pessoa.id}}">Editar</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</main>
+	
+	<a href="/"><button type="button" class="btn btn-primary">Voltar ao Inicio</button></a>
+</body>
+</html>
